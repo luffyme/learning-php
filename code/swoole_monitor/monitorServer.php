@@ -11,7 +11,7 @@ $serv->set(array(
 ));
 $serv->on('Request', function ($request, $response) use ($serv) {
 
-    $ipAllowList = array('203.205.141.50');
+    $ipAllowList = array();
     $remoteAddr = $request->server['remote_addr'];
 
     if (in_array($remoteAddr, $ipAllowList)) {
