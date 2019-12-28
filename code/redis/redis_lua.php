@@ -16,6 +16,6 @@ EOF;
 
 $redis = new Redis();
 $redis->connect('127.0.0.1', 6379);
-$ret = $redis->eval($lua, array('lua:test', 2), 1)
+$ret = $redis->eval($lua, array('lua:test', 2), 1);
 var_dump($ret);
 //eval函数的第3个参数为KEYS个数。 phpredis依据此值将KEYS和ARGV做区分。
